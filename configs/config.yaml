@@ -1,0 +1,51 @@
+# ── Project ────────────────────────────────────────────────
+project:
+  name: sign-language-recognition
+  seed: 42
+
+# ── Paths (relative to repo root) ──────────────────────────
+paths:
+  raw: data/raw                 # downloaded video clips
+  keypoints: data/keypoints     # cached .npy keypoint arrays
+  splits: data/splits           # frozen split files + checksums
+  metadata: data/WLASL_v0.3.json
+
+# ── Vocabulary ─────────────────────────────────────────────
+vocab:
+  size: 100
+  min_clips_per_sign: 15        # signs below this are dropped
+
+# ── MediaPipe keypoint extraction ──────────────────────────
+mediapipe:
+  include_face: false           # pose + both hands only
+  model_complexity: 1           # 0=fastest, 1=balanced, 2=most accurate
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+  # feature vector: pose 33x4 + left hand 21x3 + right hand 21x3 = 258
+  feature_dim: 258
+
+# ── Sequences ──────────────────────────────────────────────
+sequence:
+  length: 30                    # frames per sample (pad/truncate to this)
+
+# ── Model ──────────────────────────────────────────────────
+model:
+  type: lstm                    # lstm | transformer
+  hidden_size: 128
+  num_layers: 2
+  dropout: 0.3
+
+# ── Training ───────────────────────────────────────────────
+train:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  device: cpu                   # switch to cuda on Colab
+
+# ── Targets (from the project spec) ────────────────────────
+targets:
+  top1_accuracy: 0.80
+  top5_accuracy: 0.92
+  max_fairness_gap: 0.10        # worst group within 10% of best
+  max_ece: 0.10
+  min_fps: 30
