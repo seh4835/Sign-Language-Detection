@@ -2,11 +2,30 @@ venv/
 .venv/
 __pycache__/
 *.pyc
-data/
 *.mp4
 *.avi
 *.mov
+*.webm
 *.npy
 *.pkl
 .ipynb_checkpoints/
 .DS_Store
+*.zip
+
+# Ignore project data by default
+data/*
+
+# Allow selected metadata/dataset files
+!data/metadata/
+!data/metadata/final_cleaned_dataset.csv
+!data/metadata/final_cleaning_summary.csv
+!data/metadata/final_cleaning_report.json
+!data/metadata/master_dataset.csv
+!data/metadata/vocab_candidates_120.json
+!data/metadata/combined_expanded_manifest.csv
+!data/metadata/WLASL_v0.3.json
+
+# Keep source/downloaded data local
+data/raw/
+data/keypoints/
+data/metadata/msasl/

@@ -1,0 +1,1202 @@
+[
+  {
+    "gloss": "nice",
+    "wlasl_clips": 14,
+    "msasl_clips": 85,
+    "total_metadata_clips": 99,
+    "wlasl_signers": 13,
+    "msasl_signers": 46,
+    "total_signers": 59,
+    "class_id": 0
+  },
+  {
+    "gloss": "book",
+    "wlasl_clips": 40,
+    "msasl_clips": 58,
+    "total_metadata_clips": 98,
+    "wlasl_signers": 15,
+    "msasl_signers": 36,
+    "total_signers": 51,
+    "class_id": 1
+  },
+  {
+    "gloss": "eat",
+    "wlasl_clips": 19,
+    "msasl_clips": 77,
+    "total_metadata_clips": 96,
+    "wlasl_signers": 16,
+    "msasl_signers": 46,
+    "total_signers": 62,
+    "class_id": 2
+  },
+  {
+    "gloss": "no",
+    "wlasl_clips": 22,
+    "msasl_clips": 73,
+    "total_metadata_clips": 95,
+    "wlasl_signers": 18,
+    "msasl_signers": 45,
+    "total_signers": 63,
+    "class_id": 3
+  },
+  {
+    "gloss": "teacher",
+    "wlasl_clips": 17,
+    "msasl_clips": 77,
+    "total_metadata_clips": 94,
+    "wlasl_signers": 14,
+    "msasl_signers": 46,
+    "total_signers": 60,
+    "class_id": 4
+  },
+  {
+    "gloss": "deaf",
+    "wlasl_clips": 23,
+    "msasl_clips": 69,
+    "total_metadata_clips": 92,
+    "wlasl_signers": 18,
+    "msasl_signers": 49,
+    "total_signers": 67,
+    "class_id": 5
+  },
+  {
+    "gloss": "like",
+    "wlasl_clips": 21,
+    "msasl_clips": 71,
+    "total_metadata_clips": 92,
+    "wlasl_signers": 14,
+    "msasl_signers": 45,
+    "total_signers": 59,
+    "class_id": 6
+  },
+  {
+    "gloss": "orange",
+    "wlasl_clips": 21,
+    "msasl_clips": 70,
+    "total_metadata_clips": 91,
+    "wlasl_signers": 17,
+    "msasl_signers": 43,
+    "total_signers": 60,
+    "class_id": 7
+  },
+  {
+    "gloss": "finish",
+    "wlasl_clips": 21,
+    "msasl_clips": 68,
+    "total_metadata_clips": 89,
+    "wlasl_signers": 16,
+    "msasl_signers": 41,
+    "total_signers": 57,
+    "class_id": 8
+  },
+  {
+    "gloss": "drink",
+    "wlasl_clips": 35,
+    "msasl_clips": 54,
+    "total_metadata_clips": 89,
+    "wlasl_signers": 18,
+    "msasl_signers": 34,
+    "total_signers": 52,
+    "class_id": 9
+  },
+  {
+    "gloss": "want",
+    "wlasl_clips": 19,
+    "msasl_clips": 69,
+    "total_metadata_clips": 88,
+    "wlasl_signers": 16,
+    "msasl_signers": 41,
+    "total_signers": 57,
+    "class_id": 10
+  },
+  {
+    "gloss": "happy",
+    "wlasl_clips": 16,
+    "msasl_clips": 72,
+    "total_metadata_clips": 88,
+    "wlasl_signers": 13,
+    "msasl_signers": 41,
+    "total_signers": 54,
+    "class_id": 11
+  },
+  {
+    "gloss": "yes",
+    "wlasl_clips": 22,
+    "msasl_clips": 65,
+    "total_metadata_clips": 87,
+    "wlasl_signers": 17,
+    "msasl_signers": 45,
+    "total_signers": 62,
+    "class_id": 12
+  },
+  {
+    "gloss": "school",
+    "wlasl_clips": 19,
+    "msasl_clips": 68,
+    "total_metadata_clips": 87,
+    "wlasl_signers": 18,
+    "msasl_signers": 44,
+    "total_signers": 62,
+    "class_id": 13
+  },
+  {
+    "gloss": "what",
+    "wlasl_clips": 21,
+    "msasl_clips": 66,
+    "total_metadata_clips": 87,
+    "wlasl_signers": 18,
+    "msasl_signers": 42,
+    "total_signers": 60,
+    "class_id": 14
+  },
+  {
+    "gloss": "white",
+    "wlasl_clips": 20,
+    "msasl_clips": 67,
+    "total_metadata_clips": 87,
+    "wlasl_signers": 17,
+    "msasl_signers": 39,
+    "total_signers": 56,
+    "class_id": 15
+  },
+  {
+    "gloss": "bird",
+    "wlasl_clips": 19,
+    "msasl_clips": 67,
+    "total_metadata_clips": 86,
+    "wlasl_signers": 18,
+    "msasl_signers": 37,
+    "total_signers": 55,
+    "class_id": 16
+  },
+  {
+    "gloss": "computer",
+    "wlasl_clips": 30,
+    "msasl_clips": 56,
+    "total_metadata_clips": 86,
+    "wlasl_signers": 15,
+    "msasl_signers": 28,
+    "total_signers": 43,
+    "class_id": 17
+  },
+  {
+    "gloss": "mother",
+    "wlasl_clips": 21,
+    "msasl_clips": 64,
+    "total_metadata_clips": 85,
+    "wlasl_signers": 15,
+    "msasl_signers": 47,
+    "total_signers": 62,
+    "class_id": 18
+  },
+  {
+    "gloss": "fish",
+    "wlasl_clips": 20,
+    "msasl_clips": 64,
+    "total_metadata_clips": 84,
+    "wlasl_signers": 17,
+    "msasl_signers": 38,
+    "total_signers": 55,
+    "class_id": 19
+  },
+  {
+    "gloss": "table",
+    "wlasl_clips": 21,
+    "msasl_clips": 62,
+    "total_metadata_clips": 83,
+    "wlasl_signers": 14,
+    "msasl_signers": 33,
+    "total_signers": 47,
+    "class_id": 20
+  },
+  {
+    "gloss": "learn",
+    "wlasl_clips": 17,
+    "msasl_clips": 65,
+    "total_metadata_clips": 82,
+    "wlasl_signers": 16,
+    "msasl_signers": 44,
+    "total_signers": 60,
+    "class_id": 21
+  },
+  {
+    "gloss": "friend",
+    "wlasl_clips": 16,
+    "msasl_clips": 66,
+    "total_metadata_clips": 82,
+    "wlasl_signers": 15,
+    "msasl_signers": 43,
+    "total_signers": 58,
+    "class_id": 22
+  },
+  {
+    "gloss": "tired",
+    "wlasl_clips": 16,
+    "msasl_clips": 66,
+    "total_metadata_clips": 82,
+    "wlasl_signers": 14,
+    "msasl_signers": 42,
+    "total_signers": 56,
+    "class_id": 23
+  },
+  {
+    "gloss": "cousin",
+    "wlasl_clips": 23,
+    "msasl_clips": 59,
+    "total_metadata_clips": 82,
+    "wlasl_signers": 13,
+    "msasl_signers": 31,
+    "total_signers": 44,
+    "class_id": 24
+  },
+  {
+    "gloss": "good",
+    "wlasl_clips": 16,
+    "msasl_clips": 65,
+    "total_metadata_clips": 81,
+    "wlasl_signers": 15,
+    "msasl_signers": 43,
+    "total_signers": 58,
+    "class_id": 25
+  },
+  {
+    "gloss": "sister",
+    "wlasl_clips": 14,
+    "msasl_clips": 67,
+    "total_metadata_clips": 81,
+    "wlasl_signers": 12,
+    "msasl_signers": 43,
+    "total_signers": 55,
+    "class_id": 26
+  },
+  {
+    "gloss": "again",
+    "wlasl_clips": 16,
+    "msasl_clips": 64,
+    "total_metadata_clips": 80,
+    "wlasl_signers": 15,
+    "msasl_signers": 45,
+    "total_signers": 60,
+    "class_id": 27
+  },
+  {
+    "gloss": "student",
+    "wlasl_clips": 15,
+    "msasl_clips": 65,
+    "total_metadata_clips": 80,
+    "wlasl_signers": 13,
+    "msasl_signers": 41,
+    "total_signers": 54,
+    "class_id": 28
+  },
+  {
+    "gloss": "need",
+    "wlasl_clips": 18,
+    "msasl_clips": 62,
+    "total_metadata_clips": 80,
+    "wlasl_signers": 14,
+    "msasl_signers": 31,
+    "total_signers": 45,
+    "class_id": 29
+  },
+  {
+    "gloss": "fine",
+    "wlasl_clips": 22,
+    "msasl_clips": 57,
+    "total_metadata_clips": 79,
+    "wlasl_signers": 16,
+    "msasl_signers": 39,
+    "total_signers": 55,
+    "class_id": 30
+  },
+  {
+    "gloss": "sit",
+    "wlasl_clips": 13,
+    "msasl_clips": 66,
+    "total_metadata_clips": 79,
+    "wlasl_signers": 12,
+    "msasl_signers": 38,
+    "total_signers": 50,
+    "class_id": 31
+  },
+  {
+    "gloss": "forget",
+    "wlasl_clips": 19,
+    "msasl_clips": 60,
+    "total_metadata_clips": 79,
+    "wlasl_signers": 13,
+    "msasl_signers": 35,
+    "total_signers": 48,
+    "class_id": 32
+  },
+  {
+    "gloss": "black",
+    "wlasl_clips": 21,
+    "msasl_clips": 57,
+    "total_metadata_clips": 78,
+    "wlasl_signers": 17,
+    "msasl_signers": 43,
+    "total_signers": 60,
+    "class_id": 33
+  },
+  {
+    "gloss": "help",
+    "wlasl_clips": 22,
+    "msasl_clips": 56,
+    "total_metadata_clips": 78,
+    "wlasl_signers": 15,
+    "msasl_signers": 36,
+    "total_signers": 51,
+    "class_id": 34
+  },
+  {
+    "gloss": "paper",
+    "wlasl_clips": 18,
+    "msasl_clips": 60,
+    "total_metadata_clips": 78,
+    "wlasl_signers": 15,
+    "msasl_signers": 35,
+    "total_signers": 50,
+    "class_id": 35
+  },
+  {
+    "gloss": "hearing",
+    "wlasl_clips": 20,
+    "msasl_clips": 57,
+    "total_metadata_clips": 77,
+    "wlasl_signers": 15,
+    "msasl_signers": 44,
+    "total_signers": 59,
+    "class_id": 36
+  },
+  {
+    "gloss": "family",
+    "wlasl_clips": 20,
+    "msasl_clips": 57,
+    "total_metadata_clips": 77,
+    "wlasl_signers": 16,
+    "msasl_signers": 39,
+    "total_signers": 55,
+    "class_id": 37
+  },
+  {
+    "gloss": "sad",
+    "wlasl_clips": 14,
+    "msasl_clips": 63,
+    "total_metadata_clips": 77,
+    "wlasl_signers": 14,
+    "msasl_signers": 41,
+    "total_signers": 55,
+    "class_id": 38
+  },
+  {
+    "gloss": "hello",
+    "wlasl_clips": 13,
+    "msasl_clips": 64,
+    "total_metadata_clips": 77,
+    "wlasl_signers": 13,
+    "msasl_signers": 39,
+    "total_signers": 52,
+    "class_id": 39
+  },
+  {
+    "gloss": "who",
+    "wlasl_clips": 25,
+    "msasl_clips": 51,
+    "total_metadata_clips": 76,
+    "wlasl_signers": 21,
+    "msasl_signers": 39,
+    "total_signers": 60,
+    "class_id": 40
+  },
+  {
+    "gloss": "brother",
+    "wlasl_clips": 17,
+    "msasl_clips": 59,
+    "total_metadata_clips": 76,
+    "wlasl_signers": 15,
+    "msasl_signers": 39,
+    "total_signers": 54,
+    "class_id": 41
+  },
+  {
+    "gloss": "where",
+    "wlasl_clips": 15,
+    "msasl_clips": 60,
+    "total_metadata_clips": 75,
+    "wlasl_signers": 15,
+    "msasl_signers": 46,
+    "total_signers": 61,
+    "class_id": 42
+  },
+  {
+    "gloss": "go",
+    "wlasl_clips": 26,
+    "msasl_clips": 49,
+    "total_metadata_clips": 75,
+    "wlasl_signers": 17,
+    "msasl_signers": 22,
+    "total_signers": 39,
+    "class_id": 43
+  },
+  {
+    "gloss": "father",
+    "wlasl_clips": 14,
+    "msasl_clips": 60,
+    "total_metadata_clips": 74,
+    "wlasl_signers": 12,
+    "msasl_signers": 45,
+    "total_signers": 57,
+    "class_id": 44
+  },
+  {
+    "gloss": "water",
+    "wlasl_clips": 18,
+    "msasl_clips": 56,
+    "total_metadata_clips": 74,
+    "wlasl_signers": 15,
+    "msasl_signers": 41,
+    "total_signers": 56,
+    "class_id": 45
+  },
+  {
+    "gloss": "man",
+    "wlasl_clips": 20,
+    "msasl_clips": 54,
+    "total_metadata_clips": 74,
+    "wlasl_signers": 15,
+    "msasl_signers": 39,
+    "total_signers": 54,
+    "class_id": 46
+  },
+  {
+    "gloss": "milk",
+    "wlasl_clips": 14,
+    "msasl_clips": 60,
+    "total_metadata_clips": 74,
+    "wlasl_signers": 12,
+    "msasl_signers": 42,
+    "total_signers": 54,
+    "class_id": 47
+  },
+  {
+    "gloss": "doctor",
+    "wlasl_clips": 19,
+    "msasl_clips": 55,
+    "total_metadata_clips": 74,
+    "wlasl_signers": 14,
+    "msasl_signers": 31,
+    "total_signers": 45,
+    "class_id": 48
+  },
+  {
+    "gloss": "yellow",
+    "wlasl_clips": 18,
+    "msasl_clips": 55,
+    "total_metadata_clips": 73,
+    "wlasl_signers": 18,
+    "msasl_signers": 41,
+    "total_signers": 59,
+    "class_id": 49
+  },
+  {
+    "gloss": "blue",
+    "wlasl_clips": 20,
+    "msasl_clips": 53,
+    "total_metadata_clips": 73,
+    "wlasl_signers": 17,
+    "msasl_signers": 41,
+    "total_signers": 58,
+    "class_id": 50
+  },
+  {
+    "gloss": "girl",
+    "wlasl_clips": 15,
+    "msasl_clips": 58,
+    "total_metadata_clips": 73,
+    "wlasl_signers": 15,
+    "msasl_signers": 39,
+    "total_signers": 54,
+    "class_id": 51
+  },
+  {
+    "gloss": "but",
+    "wlasl_clips": 18,
+    "msasl_clips": 55,
+    "total_metadata_clips": 73,
+    "wlasl_signers": 14,
+    "msasl_signers": 32,
+    "total_signers": 46,
+    "class_id": 52
+  },
+  {
+    "gloss": "please",
+    "wlasl_clips": 15,
+    "msasl_clips": 57,
+    "total_metadata_clips": 72,
+    "wlasl_signers": 14,
+    "msasl_signers": 39,
+    "total_signers": 53,
+    "class_id": 53
+  },
+  {
+    "gloss": "walk",
+    "wlasl_clips": 22,
+    "msasl_clips": 50,
+    "total_metadata_clips": 72,
+    "wlasl_signers": 18,
+    "msasl_signers": 33,
+    "total_signers": 51,
+    "class_id": 54
+  },
+  {
+    "gloss": "write",
+    "wlasl_clips": 17,
+    "msasl_clips": 55,
+    "total_metadata_clips": 72,
+    "wlasl_signers": 16,
+    "msasl_signers": 35,
+    "total_signers": 51,
+    "class_id": 55
+  },
+  {
+    "gloss": "now",
+    "wlasl_clips": 21,
+    "msasl_clips": 51,
+    "total_metadata_clips": 72,
+    "wlasl_signers": 15,
+    "msasl_signers": 29,
+    "total_signers": 44,
+    "class_id": 56
+  },
+  {
+    "gloss": "boy",
+    "wlasl_clips": 15,
+    "msasl_clips": 56,
+    "total_metadata_clips": 71,
+    "wlasl_signers": 14,
+    "msasl_signers": 40,
+    "total_signers": 54,
+    "class_id": 57
+  },
+  {
+    "gloss": "red",
+    "wlasl_clips": 17,
+    "msasl_clips": 53,
+    "total_metadata_clips": 70,
+    "wlasl_signers": 16,
+    "msasl_signers": 38,
+    "total_signers": 54,
+    "class_id": 58
+  },
+  {
+    "gloss": "bathroom",
+    "wlasl_clips": 16,
+    "msasl_clips": 54,
+    "total_metadata_clips": 70,
+    "wlasl_signers": 15,
+    "msasl_signers": 35,
+    "total_signers": 50,
+    "class_id": 59
+  },
+  {
+    "gloss": "sick",
+    "wlasl_clips": 17,
+    "msasl_clips": 53,
+    "total_metadata_clips": 70,
+    "wlasl_signers": 14,
+    "msasl_signers": 35,
+    "total_signers": 49,
+    "class_id": 60
+  },
+  {
+    "gloss": "how",
+    "wlasl_clips": 18,
+    "msasl_clips": 52,
+    "total_metadata_clips": 70,
+    "wlasl_signers": 14,
+    "msasl_signers": 32,
+    "total_signers": 46,
+    "class_id": 61
+  },
+  {
+    "gloss": "same",
+    "wlasl_clips": 18,
+    "msasl_clips": 52,
+    "total_metadata_clips": 70,
+    "wlasl_signers": 11,
+    "msasl_signers": 31,
+    "total_signers": 42,
+    "class_id": 62
+  },
+  {
+    "gloss": "brown",
+    "wlasl_clips": 18,
+    "msasl_clips": 51,
+    "total_metadata_clips": 69,
+    "wlasl_signers": 17,
+    "msasl_signers": 38,
+    "total_signers": 55,
+    "class_id": 63
+  },
+  {
+    "gloss": "green",
+    "wlasl_clips": 17,
+    "msasl_clips": 52,
+    "total_metadata_clips": 69,
+    "wlasl_signers": 16,
+    "msasl_signers": 39,
+    "total_signers": 55,
+    "class_id": 64
+  },
+  {
+    "gloss": "woman",
+    "wlasl_clips": 21,
+    "msasl_clips": 48,
+    "total_metadata_clips": 69,
+    "wlasl_signers": 15,
+    "msasl_signers": 38,
+    "total_signers": 53,
+    "class_id": 65
+  },
+  {
+    "gloss": "bored",
+    "wlasl_clips": 13,
+    "msasl_clips": 56,
+    "total_metadata_clips": 69,
+    "wlasl_signers": 11,
+    "msasl_signers": 33,
+    "total_signers": 44,
+    "class_id": 66
+  },
+  {
+    "gloss": "play",
+    "wlasl_clips": 19,
+    "msasl_clips": 49,
+    "total_metadata_clips": 68,
+    "wlasl_signers": 17,
+    "msasl_signers": 36,
+    "total_signers": 53,
+    "class_id": 67
+  },
+  {
+    "gloss": "dance",
+    "wlasl_clips": 19,
+    "msasl_clips": 49,
+    "total_metadata_clips": 68,
+    "wlasl_signers": 15,
+    "msasl_signers": 38,
+    "total_signers": 53,
+    "class_id": 68
+  },
+  {
+    "gloss": "work",
+    "wlasl_clips": 19,
+    "msasl_clips": 49,
+    "total_metadata_clips": 68,
+    "wlasl_signers": 17,
+    "msasl_signers": 35,
+    "total_signers": 52,
+    "class_id": 69
+  },
+  {
+    "gloss": "you",
+    "wlasl_clips": 16,
+    "msasl_clips": 52,
+    "total_metadata_clips": 68,
+    "wlasl_signers": 13,
+    "msasl_signers": 39,
+    "total_signers": 52,
+    "class_id": 70
+  },
+  {
+    "gloss": "name",
+    "wlasl_clips": 16,
+    "msasl_clips": 52,
+    "total_metadata_clips": 68,
+    "wlasl_signers": 14,
+    "msasl_signers": 37,
+    "total_signers": 51,
+    "class_id": 71
+  },
+  {
+    "gloss": "pink",
+    "wlasl_clips": 19,
+    "msasl_clips": 48,
+    "total_metadata_clips": 67,
+    "wlasl_signers": 18,
+    "msasl_signers": 36,
+    "total_signers": 54,
+    "class_id": 72
+  },
+  {
+    "gloss": "understand",
+    "wlasl_clips": 14,
+    "msasl_clips": 53,
+    "total_metadata_clips": 67,
+    "wlasl_signers": 14,
+    "msasl_signers": 40,
+    "total_signers": 54,
+    "class_id": 73
+  },
+  {
+    "gloss": "hungry",
+    "wlasl_clips": 12,
+    "msasl_clips": 55,
+    "total_metadata_clips": 67,
+    "wlasl_signers": 12,
+    "msasl_signers": 33,
+    "total_signers": 45,
+    "class_id": 74
+  },
+  {
+    "gloss": "apple",
+    "wlasl_clips": 19,
+    "msasl_clips": 47,
+    "total_metadata_clips": 66,
+    "wlasl_signers": 17,
+    "msasl_signers": 36,
+    "total_signers": 53,
+    "class_id": 75
+  },
+  {
+    "gloss": "read",
+    "wlasl_clips": 17,
+    "msasl_clips": 49,
+    "total_metadata_clips": 66,
+    "wlasl_signers": 15,
+    "msasl_signers": 32,
+    "total_signers": 47,
+    "class_id": 76
+  },
+  {
+    "gloss": "day",
+    "wlasl_clips": 15,
+    "msasl_clips": 51,
+    "total_metadata_clips": 66,
+    "wlasl_signers": 15,
+    "msasl_signers": 30,
+    "total_signers": 45,
+    "class_id": 77
+  },
+  {
+    "gloss": "right",
+    "wlasl_clips": 18,
+    "msasl_clips": 48,
+    "total_metadata_clips": 66,
+    "wlasl_signers": 14,
+    "msasl_signers": 29,
+    "total_signers": 43,
+    "class_id": 78
+  },
+  {
+    "gloss": "wrong",
+    "wlasl_clips": 20,
+    "msasl_clips": 46,
+    "total_metadata_clips": 66,
+    "wlasl_signers": 14,
+    "msasl_signers": 27,
+    "total_signers": 41,
+    "class_id": 79
+  },
+  {
+    "gloss": "bad",
+    "wlasl_clips": 16,
+    "msasl_clips": 49,
+    "total_metadata_clips": 65,
+    "wlasl_signers": 14,
+    "msasl_signers": 37,
+    "total_signers": 51,
+    "class_id": 80
+  },
+  {
+    "gloss": "dog",
+    "wlasl_clips": 20,
+    "msasl_clips": 45,
+    "total_metadata_clips": 65,
+    "wlasl_signers": 17,
+    "msasl_signers": 30,
+    "total_signers": 47,
+    "class_id": 81
+  },
+  {
+    "gloss": "time",
+    "wlasl_clips": 19,
+    "msasl_clips": 46,
+    "total_metadata_clips": 65,
+    "wlasl_signers": 17,
+    "msasl_signers": 30,
+    "total_signers": 47,
+    "class_id": 82
+  },
+  {
+    "gloss": "english",
+    "wlasl_clips": 13,
+    "msasl_clips": 52,
+    "total_metadata_clips": 65,
+    "wlasl_signers": 11,
+    "msasl_signers": 35,
+    "total_signers": 46,
+    "class_id": 83
+  },
+  {
+    "gloss": "nurse",
+    "wlasl_clips": 14,
+    "msasl_clips": 51,
+    "total_metadata_clips": 65,
+    "wlasl_signers": 11,
+    "msasl_signers": 32,
+    "total_signers": 43,
+    "class_id": 84
+  },
+  {
+    "gloss": "here",
+    "wlasl_clips": 15,
+    "msasl_clips": 50,
+    "total_metadata_clips": 65,
+    "wlasl_signers": 12,
+    "msasl_signers": 29,
+    "total_signers": 41,
+    "class_id": 85
+  },
+  {
+    "gloss": "pencil",
+    "wlasl_clips": 15,
+    "msasl_clips": 50,
+    "total_metadata_clips": 65,
+    "wlasl_signers": 12,
+    "msasl_signers": 27,
+    "total_signers": 39,
+    "class_id": 86
+  },
+  {
+    "gloss": "know",
+    "wlasl_clips": 16,
+    "msasl_clips": 48,
+    "total_metadata_clips": 64,
+    "wlasl_signers": 14,
+    "msasl_signers": 34,
+    "total_signers": 48,
+    "class_id": 87
+  },
+  {
+    "gloss": "meet",
+    "wlasl_clips": 19,
+    "msasl_clips": 45,
+    "total_metadata_clips": 64,
+    "wlasl_signers": 16,
+    "msasl_signers": 28,
+    "total_signers": 44,
+    "class_id": 88
+  },
+  {
+    "gloss": "sign",
+    "wlasl_clips": 15,
+    "msasl_clips": 49,
+    "total_metadata_clips": 64,
+    "wlasl_signers": 13,
+    "msasl_signers": 27,
+    "total_signers": 40,
+    "class_id": 89
+  },
+  {
+    "gloss": "purple",
+    "wlasl_clips": 18,
+    "msasl_clips": 45,
+    "total_metadata_clips": 63,
+    "wlasl_signers": 18,
+    "msasl_signers": 35,
+    "total_signers": 53,
+    "class_id": 90
+  },
+  {
+    "gloss": "draw",
+    "wlasl_clips": 14,
+    "msasl_clips": 49,
+    "total_metadata_clips": 63,
+    "wlasl_signers": 13,
+    "msasl_signers": 38,
+    "total_signers": 51,
+    "class_id": 91
+  },
+  {
+    "gloss": "sorry",
+    "wlasl_clips": 14,
+    "msasl_clips": 49,
+    "total_metadata_clips": 63,
+    "wlasl_signers": 12,
+    "msasl_signers": 34,
+    "total_signers": 46,
+    "class_id": 92
+  },
+  {
+    "gloss": "hot",
+    "wlasl_clips": 21,
+    "msasl_clips": 42,
+    "total_metadata_clips": 63,
+    "wlasl_signers": 17,
+    "msasl_signers": 28,
+    "total_signers": 45,
+    "class_id": 93
+  },
+  {
+    "gloss": "have",
+    "wlasl_clips": 17,
+    "msasl_clips": 46,
+    "total_metadata_clips": 63,
+    "wlasl_signers": 15,
+    "msasl_signers": 28,
+    "total_signers": 43,
+    "class_id": 94
+  },
+  {
+    "gloss": "beautiful",
+    "wlasl_clips": 10,
+    "msasl_clips": 53,
+    "total_metadata_clips": 63,
+    "wlasl_signers": 9,
+    "msasl_signers": 31,
+    "total_signers": 40,
+    "class_id": 95
+  },
+  {
+    "gloss": "all",
+    "wlasl_clips": 21,
+    "msasl_clips": 42,
+    "total_metadata_clips": 63,
+    "wlasl_signers": 15,
+    "msasl_signers": 22,
+    "total_signers": 37,
+    "class_id": 96
+  },
+  {
+    "gloss": "hurt",
+    "wlasl_clips": 12,
+    "msasl_clips": 51,
+    "total_metadata_clips": 63,
+    "wlasl_signers": 10,
+    "msasl_signers": 26,
+    "total_signers": 36,
+    "class_id": 97
+  },
+  {
+    "gloss": "when",
+    "wlasl_clips": 14,
+    "msasl_clips": 48,
+    "total_metadata_clips": 62,
+    "wlasl_signers": 14,
+    "msasl_signers": 35,
+    "total_signers": 49,
+    "class_id": 98
+  },
+  {
+    "gloss": "class",
+    "wlasl_clips": 17,
+    "msasl_clips": 45,
+    "total_metadata_clips": 62,
+    "wlasl_signers": 15,
+    "msasl_signers": 32,
+    "total_signers": 47,
+    "class_id": 99
+  },
+  {
+    "gloss": "candy",
+    "wlasl_clips": 24,
+    "msasl_clips": 38,
+    "total_metadata_clips": 62,
+    "wlasl_signers": 16,
+    "msasl_signers": 30,
+    "total_signers": 46,
+    "class_id": 100
+  },
+  {
+    "gloss": "cook",
+    "wlasl_clips": 18,
+    "msasl_clips": 44,
+    "total_metadata_clips": 62,
+    "wlasl_signers": 13,
+    "msasl_signers": 30,
+    "total_signers": 43,
+    "class_id": 101
+  },
+  {
+    "gloss": "your",
+    "wlasl_clips": 15,
+    "msasl_clips": 47,
+    "total_metadata_clips": 62,
+    "wlasl_signers": 10,
+    "msasl_signers": 31,
+    "total_signers": 41,
+    "class_id": 102
+  },
+  {
+    "gloss": "live",
+    "wlasl_clips": 15,
+    "msasl_clips": 47,
+    "total_metadata_clips": 62,
+    "wlasl_signers": 12,
+    "msasl_signers": 28,
+    "total_signers": 40,
+    "class_id": 103
+  },
+  {
+    "gloss": "cat",
+    "wlasl_clips": 17,
+    "msasl_clips": 44,
+    "total_metadata_clips": 61,
+    "wlasl_signers": 16,
+    "msasl_signers": 30,
+    "total_signers": 46,
+    "class_id": 104
+  },
+  {
+    "gloss": "night",
+    "wlasl_clips": 13,
+    "msasl_clips": 48,
+    "total_metadata_clips": 61,
+    "wlasl_signers": 12,
+    "msasl_signers": 32,
+    "total_signers": 44,
+    "class_id": 105
+  },
+  {
+    "gloss": "year",
+    "wlasl_clips": 22,
+    "msasl_clips": 39,
+    "total_metadata_clips": 61,
+    "wlasl_signers": 16,
+    "msasl_signers": 25,
+    "total_signers": 41,
+    "class_id": 106
+  },
+  {
+    "gloss": "can",
+    "wlasl_clips": 20,
+    "msasl_clips": 41,
+    "total_metadata_clips": 61,
+    "wlasl_signers": 13,
+    "msasl_signers": 27,
+    "total_signers": 40,
+    "class_id": 107
+  },
+  {
+    "gloss": "big",
+    "wlasl_clips": 12,
+    "msasl_clips": 49,
+    "total_metadata_clips": 61,
+    "wlasl_signers": 10,
+    "msasl_signers": 27,
+    "total_signers": 37,
+    "class_id": 108
+  },
+  {
+    "gloss": "shoes",
+    "wlasl_clips": 14,
+    "msasl_clips": 46,
+    "total_metadata_clips": 60,
+    "wlasl_signers": 14,
+    "msasl_signers": 33,
+    "total_signers": 47,
+    "class_id": 109
+  },
+  {
+    "gloss": "grandmother",
+    "wlasl_clips": 11,
+    "msasl_clips": 49,
+    "total_metadata_clips": 60,
+    "wlasl_signers": 11,
+    "msasl_signers": 34,
+    "total_signers": 45,
+    "class_id": 110
+  },
+  {
+    "gloss": "sandwich",
+    "wlasl_clips": 15,
+    "msasl_clips": 45,
+    "total_metadata_clips": 60,
+    "wlasl_signers": 12,
+    "msasl_signers": 26,
+    "total_signers": 38,
+    "class_id": 111
+  },
+  {
+    "gloss": "jacket",
+    "wlasl_clips": 18,
+    "msasl_clips": 41,
+    "total_metadata_clips": 59,
+    "wlasl_signers": 15,
+    "msasl_signers": 33,
+    "total_signers": 48,
+    "class_id": 112
+  },
+  {
+    "gloss": "color",
+    "wlasl_clips": 19,
+    "msasl_clips": 40,
+    "total_metadata_clips": 59,
+    "wlasl_signers": 15,
+    "msasl_signers": 32,
+    "total_signers": 47,
+    "class_id": 113
+  },
+  {
+    "gloss": "college",
+    "wlasl_clips": 16,
+    "msasl_clips": 43,
+    "total_metadata_clips": 59,
+    "wlasl_signers": 13,
+    "msasl_signers": 33,
+    "total_signers": 46,
+    "class_id": 114
+  },
+  {
+    "gloss": "grandfather",
+    "wlasl_clips": 12,
+    "msasl_clips": 47,
+    "total_metadata_clips": 59,
+    "wlasl_signers": 12,
+    "msasl_signers": 34,
+    "total_signers": 46,
+    "class_id": 115
+  },
+  {
+    "gloss": "home",
+    "wlasl_clips": 16,
+    "msasl_clips": 43,
+    "total_metadata_clips": 59,
+    "wlasl_signers": 15,
+    "msasl_signers": 30,
+    "total_signers": 45,
+    "class_id": 116
+  },
+  {
+    "gloss": "coffee",
+    "wlasl_clips": 16,
+    "msasl_clips": 43,
+    "total_metadata_clips": 59,
+    "wlasl_signers": 14,
+    "msasl_signers": 31,
+    "total_signers": 45,
+    "class_id": 117
+  },
+  {
+    "gloss": "slow",
+    "wlasl_clips": 13,
+    "msasl_clips": 46,
+    "total_metadata_clips": 59,
+    "wlasl_signers": 13,
+    "msasl_signers": 32,
+    "total_signers": 45,
+    "class_id": 118
+  },
+  {
+    "gloss": "france",
+    "wlasl_clips": 11,
+    "msasl_clips": 48,
+    "total_metadata_clips": 59,
+    "wlasl_signers": 11,
+    "msasl_signers": 33,
+    "total_signers": 44,
+    "class_id": 119
+  }
+]
