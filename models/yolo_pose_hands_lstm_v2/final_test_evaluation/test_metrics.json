@@ -1,0 +1,269 @@
+{
+  "algorithm": {
+    "classifier": "sklearn.linear_model.LogisticRegression",
+    "max_iter": 500,
+    "solver": "lbfgs",
+    "random_state": 42,
+    "features": "concatenate(sequence.mean(axis=1), sequence.std(axis=1))",
+    "input_dim": 360,
+    "normalization": "FeatureNormalizer fitted on train_derived_manifest.csv only"
+  },
+  "data": {
+    "train_samples_fitted": 1181,
+    "validation_samples_used_for_fit": 0,
+    "test_samples_evaluated": 248,
+    "test_predictions": 248,
+    "test_video_ids_unique": 248,
+    "evaluation_passes": 1
+  },
+  "test": {
+    "accuracy": 0.3790322580645161,
+    "macro_precision": 0.4067460317460317,
+    "macro_recall": 0.405,
+    "macro_f1": 0.36183116883116884,
+    "weighted_f1": 0.3553629614113485,
+    "predicted_class_count": 86,
+    "correctly_recognized_class_count": 65,
+    "top_predictions": [
+      {
+        "gloss": "green",
+        "count": 9
+      },
+      {
+        "gloss": "like",
+        "count": 9
+      },
+      {
+        "gloss": "white",
+        "count": 9
+      },
+      {
+        "gloss": "day",
+        "count": 8
+      },
+      {
+        "gloss": "hearing",
+        "count": 8
+      },
+      {
+        "gloss": "you",
+        "count": 8
+      },
+      {
+        "gloss": "jacket",
+        "count": 7
+      },
+      {
+        "gloss": "school",
+        "count": 7
+      },
+      {
+        "gloss": "fish",
+        "count": 5
+      },
+      {
+        "gloss": "have",
+        "count": 5
+      },
+      {
+        "gloss": "hot",
+        "count": 5
+      },
+      {
+        "gloss": "shoes",
+        "count": 5
+      },
+      {
+        "gloss": "all",
+        "count": 4
+      },
+      {
+        "gloss": "father",
+        "count": 4
+      },
+      {
+        "gloss": "happy",
+        "count": 4
+      },
+      {
+        "gloss": "know",
+        "count": 4
+      },
+      {
+        "gloss": "nice",
+        "count": 4
+      },
+      {
+        "gloss": "teacher",
+        "count": 4
+      },
+      {
+        "gloss": "tired",
+        "count": 4
+      },
+      {
+        "gloss": "walk",
+        "count": 4
+      }
+    ]
+  },
+  "validation_comparison": {
+    "accuracy": 0.34309623430962344,
+    "macro_precision": 0.3248571428571428,
+    "macro_recall": 0.36416666666666664,
+    "macro_f1": 0.30577128427128425,
+    "predicted_class_count": 83,
+    "correctly_recognized_class_count": 57,
+    "top_predictions": [
+      {
+        "gloss": "green",
+        "count": 12
+      },
+      {
+        "gloss": "college",
+        "count": 8
+      },
+      {
+        "gloss": "english",
+        "count": 8
+      },
+      {
+        "gloss": "dog",
+        "count": 7
+      },
+      {
+        "gloss": "want",
+        "count": 7
+      },
+      {
+        "gloss": "black",
+        "count": 6
+      },
+      {
+        "gloss": "apple",
+        "count": 5
+      },
+      {
+        "gloss": "doctor",
+        "count": 5
+      },
+      {
+        "gloss": "home",
+        "count": 5
+      },
+      {
+        "gloss": "learn",
+        "count": 5
+      },
+      {
+        "gloss": "orange",
+        "count": 5
+      },
+      {
+        "gloss": "play",
+        "count": 5
+      },
+      {
+        "gloss": "red",
+        "count": 5
+      },
+      {
+        "gloss": "teacher",
+        "count": 5
+      },
+      {
+        "gloss": "tired",
+        "count": 5
+      },
+      {
+        "gloss": "color",
+        "count": 4
+      },
+      {
+        "gloss": "deaf",
+        "count": 4
+      },
+      {
+        "gloss": "france",
+        "count": 4
+      },
+      {
+        "gloss": "happy",
+        "count": 4
+      },
+      {
+        "gloss": "hearing",
+        "count": 4
+      }
+    ],
+    "zero_prediction_classes": [
+      "again",
+      "bad",
+      "bathroom",
+      "cat",
+      "class",
+      "computer",
+      "draw",
+      "father",
+      "good",
+      "hello",
+      "how",
+      "live",
+      "man",
+      "night",
+      "pink",
+      "right",
+      "shoes"
+    ],
+    "zero_correct_classes": [
+      "again",
+      "all",
+      "bad",
+      "bathroom",
+      "beautiful",
+      "black",
+      "book",
+      "candy",
+      "cat",
+      "class",
+      "computer",
+      "cook",
+      "dog",
+      "draw",
+      "drink",
+      "eat",
+      "father",
+      "france",
+      "go",
+      "good",
+      "hello",
+      "how",
+      "live",
+      "man",
+      "milk",
+      "nice",
+      "night",
+      "now",
+      "paper",
+      "pink",
+      "purple",
+      "read",
+      "right",
+      "same",
+      "school",
+      "shoes",
+      "sign",
+      "understand",
+      "water",
+      "who",
+      "woman",
+      "yellow",
+      "yes"
+    ]
+  },
+  "outputs": {
+    "predictions": "test_predictions.csv",
+    "confusion_matrix": "test_confusion_matrix.csv",
+    "per_class_metrics": "test_per_class_metrics.csv"
+  }
+}

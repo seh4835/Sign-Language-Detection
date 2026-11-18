@@ -1,0 +1,12 @@
+{
+  "classifier": "sklearn.linear_model.LogisticRegression",
+  "max_iter": 500,
+  "solver": "lbfgs",
+  "random_state": 42,
+  "features": "concatenate(sequence.mean(axis=1), sequence.std(axis=1))",
+  "input_dim": 360,
+  "normalization": "FeatureNormalizer fitted on corrected train_derived_manifest.csv only",
+  "training_samples": 1181,
+  "validation_samples_used": 0,
+  "test_samples_used": 0
+}

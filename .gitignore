@@ -1,31 +1,30 @@
 venv/
 .venv/
 __pycache__/
-*.pyc
-*.mp4
-*.avi
-*.mov
-*.webm
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+data/
+outputs/
+mlruns/
+reports/
 *.npy
-*.pkl
-.ipynb_checkpoints/
+*.npz
+*.pt
+*.pth
+*.onnx
+
+.env
+.env.*
+!.env.example
+
 .DS_Store
-*.zip
+Thumbs.db
 
-# Ignore project data by default
-data/*
-
-# Allow selected metadata/dataset files
-!data/metadata/
-!data/metadata/final_cleaned_dataset.csv
-!data/metadata/final_cleaning_summary.csv
-!data/metadata/final_cleaning_report.json
-!data/metadata/master_dataset.csv
-!data/metadata/vocab_candidates_120.json
-!data/metadata/combined_expanded_manifest.csv
-!data/metadata/WLASL_v0.3.json
-
-# Keep source/downloaded data local
-data/raw/
-data/keypoints/
-data/metadata/msasl/
+models/
+*.pt
+*.pth
+*.joblib
+*.npz

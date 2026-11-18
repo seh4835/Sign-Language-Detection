@@ -2,32 +2,17 @@ import csv
 import sys
 from pathlib import Path
 
-
-# =========================================================
-# PROJECT ROOT
-# =========================================================
+import numpy as np
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
-
-
-# =========================================================
-# PATHS
-# =========================================================
 
 METADATA_DIR = PROJECT_ROOT / "data" / "metadata"
 KEYPOINT_DIR = PROJECT_ROOT / "data" / "keypoints"
 
-OUTPUT_FILE = (
-    METADATA_DIR / "master_dataset.csv"
-)
-
-
-# =========================================================
-# METADATA MANIFESTS
-# =========================================================
+OUTPUT_FILE = METADATA_DIR / "master_dataset_review.csv"
+REPORT_FILE = METADATA_DIR / "master_dataset_review_report.txt"
 
 MANIFEST_FILES = [
     METADATA_DIR / "combined_expanded_manifest.csv",
@@ -37,434 +22,167 @@ MANIFEST_FILES = [
     METADATA_DIR / "recovery_manifest.csv",
 ]
 
-
-# =========================================================
-# KEYPOINT DIRECTORIES
-# =========================================================
-
 KEYPOINT_DIRS = [
+    KEYPOINT_DIR / "wlasl",
     KEYPOINT_DIR / "expanded_batch_01",
     KEYPOINT_DIR / "balanced_batch_02",
     KEYPOINT_DIR / "remaining_downloads",
     KEYPOINT_DIR / "recovery",
 ]
 
-
-# =========================================================
-# EXCLUDED ORPHAN RECORD
-# =========================================================
-
-# This keypoint exists, but its video ID is not present
-# in the available WLASL/MS-ASL metadata.
-#
-# It is excluded because the project requires metadata
-# such as gloss, signer and dataset provenance.
-
-EXCLUDED_VIDEO_IDS = {
-    "N5ZUQXL4"
-}
-
-
-# =========================================================
-# EXTRACT VIDEO ID
-# =========================================================
-
-def get_video_id(file_path):
-
-    parts = file_path.stem.split("__")
-
-    # Normal format:
-    # dataset__gloss__split__video_id.npy
-
-    if len(parts) >= 4:
-        return parts[3].strip()
-
-    # Fallback format:
-    # dataset__gloss__video_id.npy
-
-    if len(parts) == 3:
-        return parts[2].strip()
-
-    return None
-
-
-# =========================================================
-# START
-# =========================================================
-
-print("=" * 75)
-print("BUILD MASTER DATASET")
-print("=" * 75)
-
-
-# =========================================================
-# LOAD METADATA
-# =========================================================
-
-print()
-print("Loading metadata...")
-
-metadata_by_video = {}
-
-
-for manifest_file in MANIFEST_FILES:
-
-    if not manifest_file.exists():
-
-        print(
-            f"WARNING: Missing manifest: "
-            f"{manifest_file.name}"
-        )
-
-        continue
-
-
-    with open(
-        manifest_file,
-        "r",
-        encoding="utf-8"
-    ) as f:
-
-        reader = csv.DictReader(f)
-
-        for row in reader:
-
-            video_id = str(
-                row.get(
-                    "video_id",
-                    ""
-                )
-            ).strip()
-
-
-            if not video_id:
-                continue
-
-
-            if video_id not in metadata_by_video:
-
-                metadata_by_video[
-                    video_id
-                ] = row
-
-
-print(
-    f"Unique metadata records: "
-    f"{len(metadata_by_video)}"
-)
-
-
-# =========================================================
-# FIND ALL KEYPOINT FILES
-# =========================================================
-
-print()
-print("Loading keypoint files...")
-
-keypoint_records = {}
-
-unexpected_files = []
-
-
-for directory in KEYPOINT_DIRS:
-
-    if not directory.exists():
-
-        print(
-            f"WARNING: Missing keypoint directory: "
-            f"{directory}"
-        )
-
-        continue
-
-
-    for file_path in directory.glob("*.npy"):
-
-        video_id = get_video_id(
-            file_path
-        )
-
-
-        if not video_id:
-
-            unexpected_files.append(
-                file_path
-            )
-
-            continue
-
-
-        if video_id not in keypoint_records:
-
-            keypoint_records[
-                video_id
-            ] = file_path
-
-
-print(
-    f"Unique keypoint records: "
-    f"{len(keypoint_records)}"
-)
-
-print(
-    f"Unexpected keypoint filenames: "
-    f"{len(unexpected_files)}"
-)
-
-
-# =========================================================
-# MATCH KEYPOINTS WITH METADATA
-# =========================================================
-
-print()
-print("Matching metadata and keypoints...")
-
-
-master_records = []
-missing_metadata = []
-
-
-for video_id, keypoint_path in sorted(
-    keypoint_records.items()
-):
-
-    # -----------------------------------------------------
-    # Exclude orphan keypoint
-    # -----------------------------------------------------
-
-    if video_id in EXCLUDED_VIDEO_IDS:
-
-        continue
-
-
-    # -----------------------------------------------------
-    # Find metadata
-    # -----------------------------------------------------
-
-    metadata = metadata_by_video.get(
-        video_id
-    )
-
-
-    if metadata is None:
-
-        missing_metadata.append(
-            video_id
-        )
-
-        continue
-
-
-    # -----------------------------------------------------
-    # Create master record
-    # -----------------------------------------------------
-
-    master_records.append({
-
-        "dataset":
-            metadata.get(
-                "dataset",
-                ""
-            ),
-
-        "split":
-            metadata.get(
-                "split",
-                ""
-            ),
-
-        "gloss":
-            metadata.get(
-                "gloss",
-                ""
-            ).lower().strip(),
-
-        "label":
-            metadata.get(
-                "label",
-                ""
-            ),
-
-        "signer_id":
-            metadata.get(
-                "signer_id",
-                ""
-            ),
-
-        "start":
-            metadata.get(
-                "start",
-                ""
-            ),
-
-        "end":
-            metadata.get(
-                "end",
-                ""
-            ),
-
-        "video_id":
-            video_id,
-
-        "keypoint_path":
-            str(
-                keypoint_path.relative_to(
-                    PROJECT_ROOT
-                )
-            ),
-
-    })
-
-
-# =========================================================
-# SAVE MASTER DATASET
-# =========================================================
-
-OUTPUT_FILE.parent.mkdir(
-    parents=True,
-    exist_ok=True
-)
-
-
-fieldnames = [
-    "dataset",
-    "split",
-    "gloss",
-    "label",
-    "signer_id",
-    "start",
-    "end",
-    "video_id",
-    "keypoint_path",
+EXCLUDED_VIDEO_IDS = {"N5ZUQXL4"}
+EXPECTED_SHAPE = (30, 1662)
+
+FIELDS = [
+    "dataset", "split", "gloss", "label", "signer_id",
+    "start", "end", "video_id", "keypoint_path",
 ]
 
 
-with open(
-    OUTPUT_FILE,
-    "w",
-    newline="",
-    encoding="utf-8"
-) as f:
+def normalize(value):
+    return str(value or "").strip().lower()
 
-    writer = csv.DictWriter(
-        f,
-        fieldnames=fieldnames
+
+def get_file_key(path):
+    # Filenames: dataset__gloss__video_id.npy
+    # or dataset__gloss__split__video_id.npy
+    parts = path.stem.split("__")
+    if len(parts) >= 4:
+        return normalize(parts[0]), parts[-1].strip()
+    if len(parts) == 3:
+        return normalize(parts[0]), parts[2].strip()
+    return None
+
+
+def main():
+    metadata_by_key = {}
+    duplicate_metadata = []
+
+    for manifest_path in MANIFEST_FILES:
+        if not manifest_path.is_file():
+            print(f"Manifest not found (skipping): {manifest_path.name}")
+            continue
+
+        with open(manifest_path, "r", encoding="utf-8-sig", newline="") as f:
+            for row in csv.DictReader(f):
+                dataset = normalize(row.get("dataset"))
+                video_id = str(row.get("video_id", "")).strip()
+
+                if not dataset or not video_id:
+                    continue
+
+                key = (dataset, video_id)
+                if key in metadata_by_key:
+                    # Keep the first source deterministically.
+                    previous = metadata_by_key[key]
+                    if normalize(previous.get("gloss")) != normalize(row.get("gloss")):
+                        duplicate_metadata.append(
+                            f"{dataset}/{video_id}: conflicting gloss metadata"
+                        )
+                    continue
+
+                metadata_by_key[key] = row
+
+    records_by_key = {}
+    invalid_files = []
+    missing_metadata = []
+
+    for directory in KEYPOINT_DIRS:
+        if not directory.is_dir():
+            print(f"Keypoint directory not found (skipping): {directory.name}")
+            continue
+
+        for path in sorted(directory.glob("*.npy")):
+            key = get_file_key(path)
+            if not key:
+                invalid_files.append(f"{path.name}: unrecognized filename")
+                continue
+
+            dataset, video_id = key
+            if video_id in EXCLUDED_VIDEO_IDS:
+                continue
+
+            metadata = metadata_by_key.get(key)
+            if metadata is None:
+                missing_metadata.append(f"{dataset}/{video_id} ({path.name})")
+                continue
+
+            try:
+                arr = np.load(path, allow_pickle=False)
+                if arr.shape != EXPECTED_SHAPE:
+                    invalid_files.append(
+                        f"{path.name}: shape {arr.shape}, expected {EXPECTED_SHAPE}"
+                    )
+                    continue
+                if arr.dtype != np.float32:
+                    invalid_files.append(
+                        f"{path.name}: dtype {arr.dtype}, expected float32"
+                    )
+                    continue
+                if not np.isfinite(arr).all():
+                    invalid_files.append(f"{path.name}: non-finite values")
+                    continue
+                if not np.any(arr):
+                    invalid_files.append(f"{path.name}: all-zero sequence")
+                    continue
+            except Exception as exc:
+                invalid_files.append(f"{path.name}: cannot load ({exc})")
+                continue
+
+            if key not in records_by_key:
+                records_by_key[key] = {
+                    "dataset": metadata.get("dataset", ""),
+                    "split": metadata.get("split", ""),
+                    "gloss": normalize(metadata.get("gloss")),
+                    "label": metadata.get("label", ""),
+                    "signer_id": metadata.get("signer_id", ""),
+                    "start": metadata.get("start", ""),
+                    "end": metadata.get("end", ""),
+                    "video_id": video_id,
+                    "keypoint_path": str(path.relative_to(PROJECT_ROOT)),
+                }
+
+    rows = sorted(
+        records_by_key.values(),
+        key=lambda r: (
+            normalize(r["gloss"]),
+            normalize(r["dataset"]),
+            r["video_id"],
+        ),
     )
 
-    writer.writeheader()
+    METADATA_DIR.mkdir(parents=True, exist_ok=True)
+    with open(OUTPUT_FILE, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=FIELDS)
+        writer.writeheader()
+        writer.writerows(rows)
 
-    writer.writerows(
-        master_records
-    )
+    report = [
+        "MASTER DATASET REVIEW",
+        "=" * 60,
+        f"Unique metadata dataset/video pairs: {len(metadata_by_key)}",
+        f"Valid matched keypoint records: {len(rows)}",
+        f"Duplicate/conflicting metadata entries: {len(duplicate_metadata)}",
+        f"Files with invalid arrays or filenames: {len(invalid_files)}",
+        f"Keypoints without matching metadata: {len(missing_metadata)}",
+        "",
+        "INVALID FILES (first 30)",
+        *invalid_files[:30],
+        "",
+        "MISSING METADATA (first 30)",
+        *missing_metadata[:30],
+        "",
+        "CONFLICTING METADATA (first 30)",
+        *duplicate_metadata[:30],
+        "",
+        f"Review CSV: {OUTPUT_FILE}",
+        "Original master_dataset.csv was not modified.",
+    ]
 
-
-# =========================================================
-# SUMMARY
-# =========================================================
-
-print()
-print("=" * 75)
-print("MASTER DATASET SUMMARY")
-print("=" * 75)
-
-print()
-
-print(
-    f"Metadata records: "
-    f"{len(metadata_by_video)}"
-)
-
-print(
-    f"Keypoint records: "
-    f"{len(keypoint_records)}"
-)
-
-print(
-    f"Excluded orphan records: "
-    f"{len(EXCLUDED_VIDEO_IDS)}"
-)
-
-print(
-    f"Master dataset records: "
-    f"{len(master_records)}"
-)
-
-print(
-    f"Missing metadata: "
-    f"{len(missing_metadata)}"
-)
-
-print(
-    f"Unexpected filenames: "
-    f"{len(unexpected_files)}"
-)
+    REPORT_FILE.write_text("\n".join(report), encoding="utf-8")
+    print("\n".join(report))
+    print(f"\nReport saved to: {REPORT_FILE}")
 
 
-# =========================================================
-# DISPLAY ANY UNEXPECTED PROBLEMS
-# =========================================================
-
-if missing_metadata:
-
-    print()
-    print("Missing metadata video IDs:")
-
-    for video_id in missing_metadata[:20]:
-
-        print(
-            f"  {video_id}"
-        )
-
-
-if unexpected_files:
-
-    print()
-    print("Unexpected keypoint filenames:")
-
-    for path in unexpected_files[:20]:
-
-        print(
-            f"  {path.name}"
-        )
-
-
-# =========================================================
-# OUTPUT
-# =========================================================
-
-print()
-print("Saved to:")
-print(OUTPUT_FILE)
-
-print()
-print("=" * 75)
-
-
-# =========================================================
-# FINAL VALIDATION
-# =========================================================
-
-print("=" * 75)
-
-expected_keypoints = 2265
-expected_master = 2264
-expected_orphans = 1
-
-if (
-    len(keypoint_records) == expected_keypoints
-    and len(EXCLUDED_VIDEO_IDS) == expected_orphans
-    and len(master_records) == expected_master
-    and len(unexpected_files) == 0
-):
-
-    print(
-        "MASTER DATASET VALIDATION: PASS"
-    )
-
-else:
-
-    print(
-        "MASTER DATASET VALIDATION: REVIEW REQUIRED"
-    )
-
-print("=" * 75)
+if __name__ == "__main__":
+    main()

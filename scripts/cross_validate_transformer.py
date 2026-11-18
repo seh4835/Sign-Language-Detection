@@ -102,7 +102,11 @@ def train_fold(
     epochs: int,
     patience: int,
     batch_size: int,
-) -> tuple[dict[str, float | int], pd.DataFrame, pd.DataFrame]:
+    learning_rate: float = 0.0003,
+    weight_decay: float = 1e-3,
+    dropout: float = 0.2,
+    save_checkpoint: bool = True,
+) -> tuple[dict[str, float | int | str], pd.DataFrame, pd.DataFrame]:
     train_indices, validation_indices = fold_indices(assignments, fold)
     train_df = assignments.iloc[train_indices]
     validation_df = assignments.iloc[validation_indices]
@@ -119,9 +123,11 @@ def train_fold(
         SequenceDataset(validation_features, y_validation), batch_size=64, shuffle=False
     )
     model = TransformerClassifier(
-        input_dim=MODEL_FEATURE_DIM, classes=len(mapping)
+        input_dim=MODEL_FEATURE_DIM, classes=len(mapping), dropout=dropout
     ).to(DEVICE)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=0.0003, weight_decay=1e-3)
+    optimizer = torch.optim.AdamW(
+        model.parameters(), lr=learning_rate, weight_decay=weight_decay
+    )
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
         optimizer, mode="min", factor=0.5, patience=3
     )
@@ -190,22 +196,6 @@ def train_fold(
             zero_division=0,
         )
     ).transpose().reset_index(names="class")
-    checkpoint_path = CHECKPOINTS / f"transformer_pose_hands_fold_{fold}.pt"
-    torch.save(
-        {
-            "model_state_dict": model.state_dict(),
-            "input_dim": MODEL_FEATURE_DIM,
-            "dim": 128,
-            "heads": 4,
-            "layers": 2,
-            "classes": len(mapping),
-            "mean": mean,
-            "std": std,
-            "fold": fold,
-            "development_only": True,
-        },
-        checkpoint_path,
-    )
     result = {
         "fold": fold,
         "epochs_trained": len(history),
@@ -213,8 +203,25 @@ def train_fold(
         "validation_loss": final_loss,
         "top1_accuracy": top1,
         "top5_accuracy": top5,
-        "checkpoint": str(checkpoint_path.relative_to(ROOT)),
     }
+    if save_checkpoint:
+        checkpoint_path = CHECKPOINTS / f"transformer_pose_hands_fold_{fold}.pt"
+        torch.save(
+            {
+                "model_state_dict": model.state_dict(),
+                "input_dim": MODEL_FEATURE_DIM,
+                "dim": 128,
+                "heads": 4,
+                "layers": 2,
+                "classes": len(mapping),
+                "mean": mean,
+                "std": std,
+                "fold": fold,
+                "development_only": True,
+            },
+            checkpoint_path,
+        )
+        result["checkpoint"] = str(checkpoint_path.relative_to(ROOT))
     return result, pd.DataFrame(history), per_class
 
 
